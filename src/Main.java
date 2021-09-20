@@ -7,7 +7,7 @@ public class Main {
 
         Test[] tests = new Test[21];
 
-        GLaDOS tester = new GLaDOS(30, 300);
+        GLaDOS tester = new GLaDOS(32, 300);
 
         for(int i = 0; i < tests.length; i++){
             if(i % 2 == 0){
@@ -19,12 +19,8 @@ public class Main {
 
         for(int i = 0; i < tests.length; i++){
             System.out.printf("__________Препятствие № %d__________\n",i+1);
-            for(int j = 0; j < runners.length; j++){
-                if(i % 2 == 0) {
-                    runners[j].run(tests[i].getValue());
-                }else{
-                    runners[j].jump(tests[i].getValue());
-                }
+            for(int j = 0; j < runners.length; j++) {
+                runners[j].overcome(tests[i]);
             }
         }
 

@@ -1,4 +1,5 @@
 public interface Runner {
-    public void jump(double height);
-    public void run(double length);
+    public void overcome(Test test);
+    public void run(Treadmill treadmill);
+    public void jump(Barrier barrier);
 }

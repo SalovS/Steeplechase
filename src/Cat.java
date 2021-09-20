@@ -15,8 +15,8 @@ public class Cat implements Runner {
         canMove = true;
     }
 
-    @Override
-    public void jump(double height) {
+    public void jump(Barrier barrier) {
+        double height = barrier.getValue();
         if(canMove){
             if(maxHeight >= height && stamina >= height * height / 2){
                 System.out.printf("%s сделал прыжок\n",name);
@@ -28,8 +28,8 @@ public class Cat implements Runner {
         }
     }
 
-    @Override
-    public void run(double length) {
+    public void run(Treadmill treadmill) {
+        double length = treadmill.getValue();
         if(canMove){
             if(stamina >= length){
                 System.out.printf("%s пробежал\n", name);
@@ -38,6 +38,15 @@ public class Cat implements Runner {
                 System.out.printf("%s заснул\n", name);
                 canMove = false;
             }
+        }
+    }
+
+    public void overcome(Test test) {
+        Treadmill treadmill = new Treadmill(1);
+        if(treadmill.getClass().equals(test.getClass())){
+            run((Treadmill) test);
+        }else{
+            jump((Barrier) test);
         }
     }
 }
