@@ -42,12 +42,12 @@ public class Human implements Runner{
         }
     }
 
-    public void overcome(Test test) {
+    public void overcome(Obstacle obstacle) {
         Treadmill treadmill = new Treadmill(1);
-        if(treadmill.getClass().equals(test.getClass())){
-            run((Treadmill) test);
+        if(treadmill.getClass().equals(obstacle.getClass())){
+            run((Treadmill) obstacle);
         }else{
-            jump((Barrier) test);
+            jump((Barrier) obstacle);
         }
     }
 }

@@ -1,3 +1,3 @@
-public interface Test {
+public interface Obstacle {
     public double getValue();
 }
