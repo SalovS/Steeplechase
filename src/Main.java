@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args){
         Runner[] runners = new Runner[3];
-        runners[0] = new Human(5000, 60, "Пётр");
-        runners[1] = new Cat(3000, 230,"Васька");
+        runners[0] = new Cat(3000, 230,"Васька");
+        runners[1] = new Human(5000, 60, "Пётр");
         runners[2] = new Robot(4000, 30,"Atlas");
 
         GLaDOS tester = new GLaDOS(32, 300);

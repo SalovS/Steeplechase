@@ -28,7 +28,6 @@ public class Robot implements Runner{
         }
     }
 
-
     public void run(Treadmill treadmill) {
         double length = treadmill.getValue();
         if(canMove){
@@ -39,15 +38,6 @@ public class Robot implements Runner{
                 System.out.printf("%s разряжен\n", name);
                 canMove = false;
             }
-        }
-    }
-
-    public void overcome(Obstacle obstacle) {
-        Treadmill treadmill = new Treadmill(1);
-        if(treadmill.getClass().equals(obstacle.getClass())){
-            run((Treadmill) obstacle);
-        }else{
-            jump((Barrier) obstacle);
         }
     }
 }

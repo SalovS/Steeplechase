@@ -40,13 +40,4 @@ public class Cat implements Runner {
             }
         }
     }
-
-    public void overcome(Obstacle obstacle) {
-        Treadmill treadmill = new Treadmill(1);
-        if(treadmill.getClass().equals(obstacle.getClass())){
-            run((Treadmill) obstacle);
-        }else{
-            jump((Barrier) obstacle);
-        }
-    }
 }

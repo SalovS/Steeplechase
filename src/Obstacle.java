@@ -1,3 +1,3 @@
 public interface Obstacle {
-    public double getValue();
+    double getValue();
 }
