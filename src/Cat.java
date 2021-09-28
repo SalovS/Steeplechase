@@ -15,29 +15,27 @@ public class Cat implements Runner {
         canMove = true;
     }
 
-    public void jump(Barrier barrier) {
-        double height = barrier.getValue();
-        if(canMove){
-            if(maxHeight >= height && stamina >= height * height / 2){
-                System.out.printf("%s сделал прыжок\n",name);
-                stamina -= height * height / 2;
-            }else{
-                System.out.printf("%s : Мяу!\n", name);
-                canMove = false;
-            }
-        }
+    public double getMaxHeight(){
+        return maxHeight;
     }
 
-    public void run(Treadmill treadmill) {
-        double length = treadmill.getValue();
-        if(canMove){
-            if(stamina >= length){
-                System.out.printf("%s пробежал\n", name);
-                stamina -= length;
-            }else{
-                System.out.printf("%s заснул\n", name);
-                canMove = false;
-            }
-        }
+    public double getStamina(){
+        return stamina;
+    }
+
+    public boolean getStatus(){
+        return canMove;
+    }
+
+    public void setStamina(double stamina){
+        this.stamina = stamina;
+    }
+
+    public void setStatus(boolean canMove){
+        this.canMove = canMove;
+    }
+
+    public String getName(){
+        return name;
     }
 }

@@ -1,12 +1,23 @@
 public interface Runner {
-    default void overcome(Obstacle obstacle) {
-        if(obstacle instanceof Treadmill){
-            run((Treadmill)obstacle);
-        }else if(obstacle instanceof Barrier){
-            jump((Barrier) obstacle);
-        }else{
-        }
+    public default double getMaxHeight(){
+        return 0;
     }
-    void run(Treadmill treadmill);
-    void jump(Barrier barrier);
+
+    public default double getStamina(){
+        return 0;
+    }
+
+    public default boolean getStatus(){
+        return false;
+    }
+
+    public default void setStamina(double stamina){
+    }
+
+    public default void setStatus(boolean canMove){
+    }
+
+    public default String getName(){
+        return "";
+    }
 }

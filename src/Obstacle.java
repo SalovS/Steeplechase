@@ -1,3 +1,3 @@
 public interface Obstacle {
-    double getValue();
+    public default void overcome(Runner runner){}
 }

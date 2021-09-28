@@ -12,7 +12,7 @@ public class Main {
         for(int i = 0; i < obstacles.length; i++){
             System.out.printf("__________Препятствие № %d__________\n",i+1);
             for(int j = 0; j < runners.length; j++) {
-                runners[j].overcome(obstacles[i]);
+                obstacles[i].overcome(runners[j]);
             }
         }
 
